@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 # Create your models here.
 
@@ -11,6 +13,8 @@ class Categories(models.Model):
         db_table = 'category'
         verbose_name = 'Категорию'
         verbose_name_plural = 'Категории'
+        ordering = ('id',)
+
     def __str__(self):
         return str(self.name)
     
